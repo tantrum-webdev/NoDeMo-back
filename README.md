@@ -34,6 +34,13 @@ NoDeMo - Backend
 $ npm install
 ```
 
+## Environment Variables
+
+For the early stages here are the env variables to use
+
+- `APPLICATION_DEFAULT_PORT="3000"`
+- `APPLICATION_DEFAULT_URL="127.0.0.1"`
+
 ## Running the app
 
 ```bash
@@ -66,9 +73,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
--  Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
--  Website - [https://nestjs.com](https://nestjs.com/)
--  Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
