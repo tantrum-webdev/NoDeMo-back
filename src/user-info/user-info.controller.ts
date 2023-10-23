@@ -20,11 +20,6 @@ export class UserInfoController {
     return this.userInfoService.create(createUserInfoDto);
   }
 
-  @Get()
-  findAll() {
-    return this.userInfoService.findAll();
-  }
-
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.userInfoService.findOne(+id);
