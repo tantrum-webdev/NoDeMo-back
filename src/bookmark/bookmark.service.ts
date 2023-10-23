@@ -4,8 +4,8 @@ import { UpdateBookmarkDto } from './dto/update-bookmark.dto';
 
 @Injectable()
 export class BookmarkService {
+  /*eslint-disable-next-line*/
   create(createBookmarkDto: CreateBookmarkDto) {
-    console.log(createBookmarkDto);
     return 'This action adds a new bookmark';
   }
 
@@ -16,9 +16,8 @@ export class BookmarkService {
   findOne(id: number) {
     return `This action returns a #${id} bookmark`;
   }
-
+  /*eslint-disable-next-line*/
   update(id: number, updateBookmarkDto: UpdateBookmarkDto) {
-    console.log(updateBookmarkDto);
     return `This action updates a #${id} bookmark`;
   }
 

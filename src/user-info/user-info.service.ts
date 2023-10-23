@@ -4,8 +4,8 @@ import { UpdateUserInfoDto } from './dto/update-user-info.dto';
 
 @Injectable()
 export class UserInfoService {
+  /*eslint-disable-next-line*/
   create(createUserInfoDto: CreateUserInfoDto) {
-    console.log(createUserInfoDto);
     return 'This action adds a new userInfo';
   }
 
@@ -16,9 +16,8 @@ export class UserInfoService {
   findOne(id: number) {
     return `This action returns a #${id} userInfo`;
   }
-
+  /*eslint-disable-next-line*/
   update(id: number, updateUserInfoDto: UpdateUserInfoDto) {
-    console.log(updateUserInfoDto);
     return `This action updates a #${id} userInfo`;
   }
 
