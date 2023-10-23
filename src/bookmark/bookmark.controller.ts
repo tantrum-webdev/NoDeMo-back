@@ -27,7 +27,7 @@ export class BookmarkController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.bookmarkService.findOne(+id);
+    return this.bookmarkService.findOne(id);
   }
 
   @Patch(':id')
@@ -35,11 +35,11 @@ export class BookmarkController {
     @Param('id') id: string,
     @Body() updateBookmarkDto: UpdateBookmarkDto,
   ) {
-    return this.bookmarkService.update(+id, updateBookmarkDto);
+    return this.bookmarkService.update(id, updateBookmarkDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.bookmarkService.remove(+id);
+    return this.bookmarkService.remove(id);
   }
 }
