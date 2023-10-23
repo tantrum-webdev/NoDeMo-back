@@ -13,15 +13,15 @@ export class UserInfoService {
     return `This action returns all userInfo`;
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} userInfo`;
   }
   /*eslint-disable-next-line*/
-  update(id: number, updateUserInfoDto: UpdateUserInfoDto) {
+  update(id: string, updateUserInfoDto: UpdateUserInfoDto) {
     return `This action updates a #${id} userInfo`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} userInfo`;
   }
 }

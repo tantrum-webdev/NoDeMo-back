@@ -13,15 +13,15 @@ export class BookmarkService {
     return `This action returns all bookmark`;
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} bookmark`;
   }
   /*eslint-disable-next-line*/
-  update(id: number, updateBookmarkDto: UpdateBookmarkDto) {
+  update(id: string, updateBookmarkDto: UpdateBookmarkDto) {
     return `This action updates a #${id} bookmark`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} bookmark`;
   }
 }
