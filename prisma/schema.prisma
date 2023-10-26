@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id             Bytes   @id @default(dbgenerated("(uuid_to_bin(uuid(),1))")) @db.Binary(16)
+  username       String  @db.VarChar(100)
+  password       String  @db.VarChar(255)
+  email          String  @db.VarChar(100)
+  email_no_alias String? @unique(map: "email_no_alias") @db.VarChar(255)
+
+  @@map("users")
+}

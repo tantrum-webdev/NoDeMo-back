@@ -31,5 +31,5 @@ lerna-debug.log*
 /.vscode
 
 # Other
-.env
+.env*
 .eslintcache
