@@ -1,8 +1,5 @@
 import { Injectable } from '@nestjs/common';
 
-//This is where the model will come ine once prisma is here
-export type User = any;
-
 @Injectable()
 export class UsersService {
   private readonly users = [
