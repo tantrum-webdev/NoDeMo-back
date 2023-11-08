@@ -36,10 +36,23 @@ $ npm install
 
 ## Environment Variables
 
-For the early stages here are the env variables to use
+We have to use multiple .env files :
+
+- `.env` that will contain the production DB adress
+- `.env.development` that will contain the development DB adress
+
+Each will contain a `DATABASE_URL` variable unique to each `.env` file and both :
 
 - `APPLICATION_DEFAULT_PORT="3000"`
 - `APPLICATION_DEFAULT_URL="127.0.0.1"`
+
+These are the default variables to use in this early development, in the future these won't be in this README of course 😁 and you'll have to write your own values for these variables
+
+The scripts contained in the package.json file will, in turn, use the right adress to do the right operation :
+
+- `push.envdb` : will update the db according to changes made on the prisma schema (dropping tables excluded)
+- `start`, `start:dev`, `start:debug` / `start:prod` : will start the nest project using the dev DB / prod DB
+- `test`, `test:watch`, `test:e2e` : all will operate using the dev DB
 
 ## Running the app
 
