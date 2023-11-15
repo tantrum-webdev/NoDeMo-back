@@ -6,6 +6,7 @@ import {
 import { AppModule } from './app.module';
 import 'dotenv/config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -23,6 +24,11 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
   const PORT = process.env.APPLICATION_DEFAULT_PORT;
   const BASE_URI = process.env.APPLICATION_DEFAULT_URL;
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+    }),
+  );
   await app.listen(PORT, BASE_URI);
 }
 bootstrap();
