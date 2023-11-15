@@ -9,8 +9,6 @@ export class AuthController {
   @Post('register')
   signUp(@Body() dto: AuthDto) {
     return this.authService.signUp(dto);
-    //save new user in db
-    //return saved user
   }
 
   @Post('login')
