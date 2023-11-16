@@ -1,15 +1,27 @@
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+import { applyDecorators } from '@nestjs/common';
+import {
+  IsEmail,
+  IsNotEmpty,
+  IsString,
+  Matches,
+  MinLength,
+} from 'class-validator';
+
+const AuthorizedString = () => {
+  const whiteSpaceRegEx = /^\S*$/;
+  return applyDecorators(Matches(whiteSpaceRegEx), IsNotEmpty(), IsString());
+};
+const minimumLength = 8;
 
 export class AuthDto {
-  @IsNotEmpty()
-  @IsString()
+  @AuthorizedString()
   username: string;
 
-  @IsNotEmpty()
-  @IsString()
+  @AuthorizedString()
+  @MinLength(minimumLength)
   password: string;
 
-  @IsNotEmpty()
+  @AuthorizedString()
   @IsEmail()
   email: string;
 }
