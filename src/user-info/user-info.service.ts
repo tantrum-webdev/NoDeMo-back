@@ -4,8 +4,8 @@ import { UpdateUserInfoDto } from './dto/update-user-info.dto';
 
 @Injectable()
 export class UserInfoService {
-  /*eslint-disable-next-line*/
-  create(createUserInfoDto: CreateUserInfoDto) {
+  /*@typescript-eslint/eslint-disable-next-line*/
+  create() {
     return 'This action adds a new userInfo';
   }
 
@@ -13,15 +13,15 @@ export class UserInfoService {
     return `This action returns all userInfo`;
   }
 
-  findOne(id: string) {
-    return `This action returns a #${id} userInfo`;
+  findOne() {
+    return `This action returns a userInfo`;
   }
-  /*eslint-disable-next-line*/
-  update(id: string, updateUserInfoDto: UpdateUserInfoDto) {
-    return `This action updates a #${id} userInfo`;
+  /*@typescript-eslint/eslint-disable-next-line*/
+  update() {
+    return `This action updates a userInfo`;
   }
 
-  remove(id: string) {
-    return `This action removes a #${id} userInfo`;
+  remove() {
+    return `This action removes a userInfo`;
   }
 }
