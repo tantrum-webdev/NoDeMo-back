@@ -18,8 +18,7 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   rules: {
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 0,
+    'no-unused-vars': 'error',
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -47,4 +46,4 @@ module.exports = {
       { allowSameFolder: true },
     ],
   },
-};
+}
