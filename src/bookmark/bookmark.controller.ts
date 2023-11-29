@@ -6,28 +6,28 @@ import {
   Patch,
   Param,
   Delete,
-} from '@nestjs/common';
-import { BookmarkService } from './bookmark.service';
-import { CreateBookmarkDto } from './dto/create-bookmark.dto';
-import { UpdateBookmarkDto } from './dto/update-bookmark.dto';
+} from '@nestjs/common'
+import { BookmarkService } from './bookmark.service'
+import { CreateBookmarkDto } from './dto/create-bookmark.dto'
+import { UpdateBookmarkDto } from './dto/update-bookmark.dto'
 
 @Controller('bookmark')
 export class BookmarkController {
-  constructor(private readonly bookmarkService: BookmarkService) {}
+  private readonly bookmarkService: BookmarkService
 
   @Post()
   create(@Body() createBookmarkDto: CreateBookmarkDto) {
-    return this.bookmarkService.create(createBookmarkDto);
+    return this.bookmarkService.create(createBookmarkDto)
   }
 
   @Get()
   findAll() {
-    return this.bookmarkService.findAll();
+    return this.bookmarkService.findAll()
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.bookmarkService.findOne(id);
+    return this.bookmarkService.findOne(id)
   }
 
   @Patch(':id')
@@ -35,11 +35,11 @@ export class BookmarkController {
     @Param('id') id: string,
     @Body() updateBookmarkDto: UpdateBookmarkDto,
   ) {
-    return this.bookmarkService.update(id, updateBookmarkDto);
+    return this.bookmarkService.update(id, updateBookmarkDto)
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.bookmarkService.remove(id);
+    return this.bookmarkService.remove(id)
   }
 }
